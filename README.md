@@ -1,8 +1,8 @@
-# Pokemon Fusion Battle Simulator
+# README Generator
 
 ## Description
 
-This is a fun game that allows users to pick their own fan created pokemon and fight auto generated fusion pokemon   
+This is a fun README generator that allows users to create professional READMEs by quickly prompting users to answer a series of questions and autogenerating those responses into a professional README format.   
 
 ## Table of Contents
 
@@ -13,17 +13,17 @@ This is a fun game that allows users to pick their own fan created pokemon and f
 
 ## Installation
 
-N/A
+Users will need to have node.js installed and access index.js using node.js
 
 ## Usage
 
-The website is live [Pokemon-Fusion-Battle-Simulator][https://wangbrian26.github.io/Pokemon-Fusion-Battle-Simulator/]
+The website is live [README-Generator][https://wangbrian26.github.io/README-Generator/]
 
-When users open up the game, they will be prompted to selected one of 3 fan created pokemon. If you don't like the current selection, please refresh in order to see new fan created pokemon. Then, users will be prompted to allocate 50 stats points to their selected stats and given a list of rules for the upcoming pokemon battle. Users will then see the battle take place between their fan created pokemon and a random fusion pokemon. Users will then battle to see how many fusion pokemon they can defeat.
+Users will access the file index.js using node.js. Users will then be prompted to answer a series of questions that will automatically be added into a professional README document. 
 
 ## Credits
 
-I worked this project with Nicole, Johnathan, and Jason
+Thanks to Professor Quinton Fults, TA Takara Truong, and TA Blake Marcus for helping with the learning of these elements. 
 
 ## License
 
