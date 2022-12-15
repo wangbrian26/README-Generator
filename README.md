@@ -1,30 +1,48 @@
-# README Generator
+# adsfklja 
 
 ## Description
 
-This is a fun README generator that allows users to create professional READMEs by quickly prompting users to answer a series of questions and autogenerating those responses into a professional README format.   
+ds   
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+- [Contributions](#contributions)
+- [Features](#features)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
-Users will need to have node.js installed and access index.js using node.js
+adsjfj
 
 ## Usage
 
-The website is live [README-Generator][https://wangbrian26.github.io/README-Generator/]
+The website is live [adsfklja][https://adflkj.github.io/adsfklja/]
 
-Users will access the file index.js using node.js. Users will then be prompted to answer a series of questions that will automatically be added into a professional README document. 
+aadfj
+      
+## Contributions
 
-## Credits
+ajdkf
 
-Thanks to Professor Quinton Fults, TA Takara Truong, and TA Blake Marcus for helping with the learning of these elements. 
+## Features
 
-## License
+Here are some of the highlight features of this application: 
 
-N/A
+adfklj
+
+## Tests
+
+Here are some tests that you can run to try out the application:
+
+adsfklj
+
+## Questions
+
+If you have any questions or would like to see any of my other projects, please visit my github: 
+
+[Github][https://github.com/adflkj]
+
+Please email me at adlfkj

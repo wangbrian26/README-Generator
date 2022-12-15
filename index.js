@@ -1,6 +1,29 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+renderLicenseTableOfContents = (license) => {
+  if(license !== "None") {
+    return `\n- [License](#license)`;
+  }
+  return "";
+}
+
+renderLicenseSection = (license, projectLicense) => {
+  if(license !== "None") {
+    return `\n\n## License \n${license}\n\n${projectLicense}`
+  }
+  return "";
+}
+
+renderLicenseBadge = (license, licenseName) => {
+  if (license !== "None") {
+    return `\n\n![${license}](https://img.shields.io/badge/License%3A-${
+        licenseName
+      }-green)`
+    }
+    return "";
+}
+
 inquirer
   .prompt([
     {
@@ -43,6 +66,7 @@ inquirer
         "MIT",
         "ISC License",
         "Boost",
+        "None",
       ],
       name: "license",
     },
@@ -167,16 +191,14 @@ SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
 FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.`;
+    } else if (response.license == "None") {
+      
     }
     const fileName = "README.md";
-
+    const licenseName = response.license.split(" ").join("-")
     fs.writeFile(
       fileName,
-      `![${response.license}](https://img.shields.io/badge/License%3A-${
-        response.license
-      }-green)
-
-# ${response.projectName}
+      `# ${response.projectName} ${renderLicenseBadge(response.license, licenseName)}
 
 ## Description
 
@@ -185,8 +207,7 @@ ${response.description}
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
+- [Usage](#usage)${renderLicenseTableOfContents(response.license)}
 - [Contributions](#contributions)
 - [Features](#features)
 - [Tests](#tests)
@@ -202,14 +223,7 @@ The website is live [${response.projectName.split(" ").join("-")}][https://${
         response.gitHub
       }.github.io/${response.projectName.split(" ").join("-")}/]
 
-${response.usage}
-
-
-## License
-
-${response.license}
-
-${projectLicense}
+${response.usage}${renderLicenseSection(response.license, projectLicense)}
       
 ## Contributions
 
@@ -233,6 +247,6 @@ If you have any questions or would like to see any of my other projects, please 
 
 [Github][https://github.com/${response.gitHub}]
 
-Please email me at ${response.email}`
+Please email me at ${response.email}`, (err) => {if (err) throw err}
     );
   });
