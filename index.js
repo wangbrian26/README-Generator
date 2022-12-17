@@ -2,27 +2,25 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 renderLicenseTableOfContents = (license) => {
-  if(license !== "None") {
+  if (license !== "None") {
     return `\n- [License](#license)`;
   }
   return "";
-}
+};
 
 renderLicenseSection = (license, projectLicense) => {
-  if(license !== "None") {
-    return `\n\n## License \n${license}\n\n${projectLicense}`
+  if (license !== "None") {
+    return `\n\n## License \n${license}\n\n${projectLicense}`;
   }
   return "";
-}
+};
 
 renderLicenseBadge = (license, licenseName) => {
   if (license !== "None") {
-    return `\n\n![${license}](https://img.shields.io/badge/License%3A-${
-        licenseName
-      }-green)`
-    }
-    return "";
-}
+    return `\n\n![${license}](https://img.shields.io/badge/License%3A-${licenseName}-green)`;
+  }
+  return "";
+};
 
 inquirer
   .prompt([
@@ -192,13 +190,15 @@ FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.`;
     } else if (response.license == "None") {
-      
     }
-    const fileName = "README.md";
-    const licenseName = response.license.split(" ").join("-")
+    const fileName = `./generated-readme/${response.projectName}-README.md`;
+    const licenseName = response.license.split(" ").join("-");
     fs.writeFile(
       fileName,
-      `# ${response.projectName} ${renderLicenseBadge(response.license, licenseName)}
+      `# ${response.projectName} ${renderLicenseBadge(
+        response.license,
+        licenseName
+      )}
 
 ## Description
 
@@ -247,6 +247,9 @@ If you have any questions or would like to see any of my other projects, please 
 
 [Github][https://github.com/${response.gitHub}]
 
-Please email me at ${response.email}`, (err) => {if (err) throw err}
+Please email me at ${response.email}`,
+      (err) => {
+        if (err) throw err;
+      }
     );
   });
