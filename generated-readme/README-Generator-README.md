@@ -27,7 +27,6 @@ The website is live [README-Generator][https://wangbrian26.github.io/README-Gene
 Navigate to the folder and files. Then run node index.js in the command line and then answer a series of questions.
 
 ## License 
-MIT
 
 MIT License
 

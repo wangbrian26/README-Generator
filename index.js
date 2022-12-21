@@ -12,7 +12,7 @@ renderLicenseTableOfContents = (license) => {
 // Checks to see if a license is selected to generate a license section in the body, if not, it will return blank
 renderLicenseSection = (license, projectLicense) => {
   if (license !== "None") {
-    return `\n\n## License \n${license}\n\n${projectLicense}`;
+    return `\n\n## License \n\n${projectLicense}`;
   }
   return "";
 };

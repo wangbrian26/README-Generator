@@ -28,8 +28,11 @@ Navigate to the folder containing the project. Then in the terminal run node ind
 
 If you would like to see a demonstration of this application, please click on this link [Demonstration][https://youtu.be/RCdXR9i8iJM].
 
+You will be asked a series of questions to dynamically render your README file as shown below.
+
+![Screenshot](./assets/README-Prompts.png)
+
 ## License 
-MIT
 
 MIT License
 
