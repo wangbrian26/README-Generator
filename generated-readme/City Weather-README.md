@@ -1,10 +1,10 @@
-# README Generator 
+# City Weather 
 
 ![MIT](https://img.shields.io/badge/License%3A-MIT-green)
 
 ## Description
 
-This project was made to help users create professional README files without having to spend the time to create the formatting.   
+This project was created to allow users to easily search the weather of their city of choice. Users will also be able to see their previously searched cities in case they need to find that infromation again. Users can also pick what units of measurements they would like to view with, as some people prefer metric, imperial, or standard.   
 
 ## Table of Contents
 
@@ -18,22 +18,20 @@ This project was made to help users create professional README files without hav
 
 ## Installation
 
-There is no installation process needed for this project. The only requirement is that the user is able to run node.
+There is no installation needed for this application to be used.
 
 ## Usage
 
-The website is live [README-Generator][https://wangbrian26.github.io/README-Generator/]
+The website is live [City-Weather][https://wangbrian26.github.io/City-Weather/]
 
-Navigate to the folder containing the project. Then in the terminal run node index.js to start the project.
-
-If you would like to see a demonstration of this application, please click on this link [Demonstration][https://youtu.be/ygy9yVQeAjk].
+In order to use this application, please type the name of the city you would like to view information for. Then, select what type of measurement you would like to see. Then press the search button. If you would like to see a previously searched city, please select a unit of measurement, and then press the city you would like to see the information for.
 
 ## License 
 MIT
 
 MIT License
 
-Copyright (c) [2022] []
+Copyright (c) [2022] [Brian Wang]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -55,19 +53,19 @@ SOFTWARE.
       
 ## Contributions
 
-This project was able to be done through the teachings of Instructor Quinton Fults, TA Takara Truong, and TA Blake Matthews. 
+Brian Wang
 
 ## Features
 
 Here are some of the highlight features of this application: 
 
-This project allows users to pick the license that they want and generates that information at license section. It also generates a badge corresponding to that license at the top of the page. 
+I want to highlight that users can select the type of units they would like to see all of the information in. This allows all types of users to be able to use this application. Not only that, but the app also allows you to see a little picture of what kind of weather to expect.
 
 ## Tests
 
 Here are some tests that you can run to try out the application:
 
-Users can test using node index.js
+Please type the name of your city with any type of capitalization. 
 
 ## Questions
 

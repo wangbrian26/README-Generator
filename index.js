@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+// Checks to see if a license is selected to generate a license tag in the table of contents, if not, it will return blank
 renderLicenseTableOfContents = (license) => {
   if (license !== "None") {
     return `\n- [License](#license)`;
@@ -8,6 +9,7 @@ renderLicenseTableOfContents = (license) => {
   return "";
 };
 
+// Checks to see if a license is selected to generate a license section in the body, if not, it will return blank
 renderLicenseSection = (license, projectLicense) => {
   if (license !== "None") {
     return `\n\n## License \n${license}\n\n${projectLicense}`;
@@ -15,12 +17,15 @@ renderLicenseSection = (license, projectLicense) => {
   return "";
 };
 
+// Checks to see if a license is selected to generate a license badge, if not, it will return blank
 renderLicenseBadge = (license, licenseName) => {
   if (license !== "None") {
     return `\n\n![${license}](https://img.shields.io/badge/License%3A-${licenseName}-green)`;
   }
   return "";
 };
+
+// Series of questions to generate the information to populate the README
 
 inquirer
   .prompt([
@@ -96,6 +101,7 @@ inquirer
       name: "email",
     },
   ])
+  // Takes the responses and evaluates which license was selected to generate what kind of text is needed
   .then((response) => {
     let projectLicense = "";
     if (response.license == "Apache License 2.0") {
@@ -191,7 +197,11 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.`;
     } else if (response.license == "None") {
     }
-    const fileName = `./generated-readme/${response.projectName}-README.md`;
+
+    // Creates a README file in the folder generated-readme with the project name using the information given
+    const fileName = `./generated-readme/${response.projectName
+      .split(" ")
+      .join("-")}-README.md`;
     const licenseName = response.license.split(" ").join("-");
     fs.writeFile(
       fileName,
