@@ -4,7 +4,7 @@
 
 ## Description
 
-This project was made to help users create professional README files without having to spend the time to create the formatting.   
+This project was created in order to allow users to spend less time creating professional README files for their applications by asking users a series of questions and generating a professional README using their responses.   
 
 ## Table of Contents
 
@@ -18,22 +18,20 @@ This project was made to help users create professional README files without hav
 
 ## Installation
 
-There is no installation process needed for this project. The only requirement is that the user is able to run node.
+Users need to have node.js installed in order to run the application.
 
 ## Usage
 
 The website is live [README-Generator][https://wangbrian26.github.io/README-Generator/]
 
-Navigate to the folder containing the project. Then in the terminal run node index.js to start the project.
-
-If you would like to see a demonstration of this application, please click on this link [Demonstration][https://youtu.be/RCdXR9i8iJM].
+Navigate to the folder and files. Then run node index.js in the command line and then answer a series of questions.
 
 ## License 
 MIT
 
 MIT License
 
-Copyright (c) [2022] []
+Copyright (c) [2022] [Brian Wang]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -55,19 +53,19 @@ SOFTWARE.
       
 ## Contributions
 
-This project was able to be done through the teachings of Instructor Quinton Fults, TA Takara Truong, and TA Blake Matthews. 
+Brian Wang
 
 ## Features
 
 Here are some of the highlight features of this application: 
 
-This project allows users to pick the license that they want and generates that information at license section. It also generates a badge corresponding to that license at the top of the page. 
+This application takes in users responses and generates a professional README file. If no license is selected, the file will not include that section.
 
 ## Tests
 
 Here are some tests that you can run to try out the application:
 
-Users can test using node index.js
+Please run node index.js and pick different licenses in order to see how the application dynamically renders the README page.
 
 ## Questions
 
